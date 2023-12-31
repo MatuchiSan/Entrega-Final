@@ -1,0 +1,80 @@
+.fondo {
+  background-color: rgb(108, 77, 77);
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 25px;
+  text-align: center;
+}
+div {
+  margin: 5px;
+}
+.title {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  color: ghostwhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.tarjeta {
+  background-color: bisque;
+  margin: 2px;
+}
+.boton {
+  box-shadow: wheat;
+  background-color: rgb(108, 77, 77);
+}
+.columna {
+  margin: 0px;
+}
+
+.nav {
+  text-align: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.tituloLabel {
+  color: aliceblue;
+  font-size: 15px;
+  text-align: left;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  background-color: rgb(234, 223, 209);
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 15px;
+  text-align: center;
+  max-width: 80%;
+}
+.data {
+  border: 0;
+  margin: 8px;
+  outline: none;
+  border: solid #c29e84;
+  padding: 10px;
+  width: 280px;
+  max-width: 80%;
+}
+.data:focus {
+  border-color: rgb(108, 77, 77);
+}
+
+.databien {
+  color: chartreuse;
+}
+
+.datamal {
+  color: crimson;
+}
