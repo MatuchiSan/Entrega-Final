@@ -1,9 +1,11 @@
 //funcion creadorar de habitaciones para un hotel
-function Habitaciones(nombre, capacidad, precio, info) {
-  this.nombre = nombre;
-  this.capacidad = capacidad;
-  this.precio = precio;
-  this.info = info;
+class Habitaciones {
+  constructor(nombre, capacidad, precio, info) {
+    this.nombre = nombre;
+    this.capacidad = capacidad;
+    this.precio = precio;
+    this.info = info;
+  }
 }
 //habitaciones
 const zeus = new Habitaciones(
