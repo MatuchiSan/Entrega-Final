@@ -53,3 +53,23 @@ function limpiarFormulario(formulario) {
 function guardarReservas() {
   localStorage.setItem("reservas", JSON.stringify(reservas));
 }
+
+const contactenos = document.getElementById("contactenos");
+
+contactenos.addEventListener("click", tostada);
+
+function tostada() {
+  Toastify({
+    text: "Wpp: +54 11-2354-9897",
+    duration: 5000,
+    destination: "https://web.whatsapp.com/",
+    newWindow: true,
+    close: true,
+    gravity: "bottom",
+    position: "right",
+    stopOnFocus: true,
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
+}
