@@ -9,11 +9,3 @@ class Reserva {
   }
 }
 const reservas = [];
-
-function limpiarFormulario(formulario) {
-  formulario.reset();
-}
-
-function guardarReservas() {
-  localStorage.setItem("reservas", JSON.stringify(reservas));
-}

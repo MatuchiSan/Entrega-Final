@@ -34,11 +34,16 @@ const dioniso = new Habitaciones(
 );
 
 function mostrarHabitacion(habitacion) {
-  alert(`Nombre: ${habitacion.nombre} \n
-                    Capacidad: ${habitacion.capacidad}\n
-                    Precio: ${habitacion.precio}\n
-                    Informacion: ${habitacion.info}`);
+  Swal.fire({
+    title: habitacion.nombre,
+    text: `${habitacion.info}\n // Capaciadad: ${habitacion.capacidad} // Precio: \$${habitacion.precio}`,
+    imageUrl: "./imagenes/" + habitacion.nombre + ".jpg",
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: "Custom image",
+  });
 }
+
 function mostrarHabitacionZeus() {
   mostrarHabitacion(zeus);
 }
@@ -54,12 +59,15 @@ function mostrarHabitacionApolo() {
 function mostrarHabitacionDioniso() {
   mostrarHabitacion(dioniso);
 }
-const verZeus = document.getElementById("verZeus");
-const verAfrodita = document.getElementById("verAfrodita");
-const verApolo = document.getElementById("verApolo");
-const verDioniso = document.getElementById("verDioniso");
 
+const verZeus = document.getElementById("verZeus");
 verZeus.addEventListener("click", mostrarHabitacionZeus);
+
+const verAfrodita = document.getElementById("verAfrodita");
 verAfrodita.addEventListener("click", mostrarHabitacionAfrodita);
+
+const verApolo = document.getElementById("verApolo");
 verApolo.addEventListener("click", mostrarHabitacionApolo);
+
+const verDioniso = document.getElementById("verDioniso");
 verDioniso.addEventListener("click", mostrarHabitacionDioniso);

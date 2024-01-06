@@ -9,13 +9,8 @@ const miFormulario = document.getElementById("formulario");
 
 btnEnviar.addEventListener("click", (e) => {
   e.preventDefault();
-  reservarHabitacion();
+  validarFormulario();
   guardarReservas();
-  alert(
-    "¡Se enviaron sus datos correctamente, nos comunicaremos con usted a la brevedad!"
-  );
-  limpiarFormulario(miFormulario);
-  alert(JSON.stringify(reservas));
 });
 
 function reservarHabitacion() {
@@ -25,4 +20,36 @@ function reservarHabitacion() {
     inputMail.value
   );
   reservas.push(nuevaReserva);
+  Swal.fire({
+    position: "top-center",
+    icon: "success",
+    title: "Perfecto! Nos contactaremos contigo a la brevedad!",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+  limpiarFormulario(miFormulario);
+}
+
+function validarFormulario() {
+  const validacion =
+    inputNomApe.value !== "" &&
+    inputNomApe.value !== null &&
+    inputNomApe.value !== undefined &&
+    inputTelf.value !== "" &&
+    inputTelf.value !== null &&
+    inputTelf.value !== undefined &&
+    inputMail.value !== "" &&
+    inputMail.value !== null &&
+    inputMail.value !== undefined;
+  validacion === true
+    ? reservarHabitacion()
+    : Swal.fire("Complete todos los campos!");
+}
+
+function limpiarFormulario(formulario) {
+  formulario.reset();
+}
+
+function guardarReservas() {
+  localStorage.setItem("reservas", JSON.stringify(reservas));
 }
